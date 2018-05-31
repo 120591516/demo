@@ -27,7 +27,7 @@ public class UserController {
     public String show(@RequestParam(value = "name")String name){
         User user = userService.findUserByName(name);
         if(null != user)
-            return user.getId()+"/"+user.getName()+"/"+user.getPassword();
+            return user.toString();
         else return "null";
     }
 }

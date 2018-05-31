@@ -1,6 +1,8 @@
 package com.example.demo.pojo;
 
 
+import com.example.demo.base.AbstractEntity;
+
 import javax.persistence.*;
 
 /**
@@ -8,7 +10,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "user")
-public class User {
+public class User extends AbstractEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
